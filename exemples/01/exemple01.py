@@ -17,4 +17,6 @@ print(cotxe1)
 # mètode descriu
 # mètode per posar-lo o no en venda
 
+# llista de cotxes i mostro les descripcions de tots els cotxes
+
 
