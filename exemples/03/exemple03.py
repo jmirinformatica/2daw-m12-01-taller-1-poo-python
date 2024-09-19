@@ -1,6 +1,12 @@
-class Animal:
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
     def __init__(self, nom):
         self.nom = nom
+
+    @abstractmethod
+    def parla(self):
+        pass
 
     def menja(self):
         print(f"{self.nom} està menjant")
@@ -16,15 +22,24 @@ class Gat(Animal):
     def parla(self):
         print("Miau miau")
 
+class Porc(Animal):
+    def parla(self):
+        print("Oink oink")
+
+# això dona error
+# un_animal = Animal("Epi") 
+
 un_gos = Gos("Rex")
-un_gos.menja()
-un_gos.parla()
+# un_gos.menja()
+# un_gos.parla()
 
 un_gat = Gat("Fifi")
-un_gat.dorm()
-un_gat.parla()
+# un_gat.dorm()
+# un_gat.parla()
 
-llista_animals = [un_gos, un_gat]
+un_porc = Porc("Piggy")
+
+llista_animals = [un_gos, un_gat, un_porc]
 
 for a in llista_animals:
     a.parla()
