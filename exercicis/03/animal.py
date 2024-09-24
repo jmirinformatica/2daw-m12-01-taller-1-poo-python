@@ -1,8 +1,10 @@
 from abc import ABC, abstractmethod
 
 class Animal(ABC):
-    def __init__(self, nom):
+    def __init__(self, nom, color, es_manso):
         self.nom = nom
+        self.color = color
+        self.es_manso = es_manso
 
     @abstractmethod
     def parla(self):
@@ -24,8 +26,16 @@ class Animal(ABC):
     def corre(self):
         return f"{self.nom} està corrent"
     
+    def description(self):
+        # mostro per pantalla el que retorna el mètode __str__
+        print(self)
+    
     def __str__(self):
-        return f"Soc el/l'animal anomenat {self.nom}"
+        if self.es_manso:
+            es_manso_str = "és manso"
+        else:
+            es_manso_str = "no és manso"
+        return f"Soc el/l'animal anomenat {self.nom} de color {self.color} i que {es_manso_str}"
 
 class Gos(Animal):
     def parla(self):
@@ -57,9 +67,9 @@ class Cangur(Animal):
         return desc + " i soc un cangur"
 
 class Porc(Animal):
-    def __init__(self, nom, pes):
-        super().__init__(nom) # soc un animal
-        self.pes = pes        # amb atributs propis
+    def __init__(self, nom, color, es_manso, pes):
+        super().__init__(nom, color, es_manso) # soc un animal
+        self.pes = pes                         # amb atributs propis
 
     def parla(self):
         print("Oink oink")

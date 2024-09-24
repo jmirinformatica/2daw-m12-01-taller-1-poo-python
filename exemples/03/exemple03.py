@@ -69,11 +69,6 @@ if un_gos == un_altre_gat:
 else:
     print("Son gossos diferents")
 
-
-
-
-
-
 # això dona error
 # un_animal = Animal("Epi") 
 
