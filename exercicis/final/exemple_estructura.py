@@ -1,13 +1,13 @@
 class Fitxer:
 
     @staticmethod
-    def creaFitxer(extension:str):
-        if extension == "xml":
-            fitxer = FitxerXML("biblio.xml")
-        elif extension == "csv":
-            fitxer = FitxerCSV("biblio.csv")
-        elif extension == "json":
-            fitxer = FitxerJSON("biblio.json")
+    def creaFitxer(nom:str):
+        if nom.endswith(".xml"): # te l'extensio .xml
+            fitxer = FitxerXML(nom)
+        elif nom.endswith(".csv"):
+            fitxer = FitxerCSV(nom)
+        elif nom.endswith(".json"):
+            fitxer = FitxerJSON(nom)
         else:
             print("Format no reconegut")
             fitxer = None
@@ -43,5 +43,5 @@ class Biblioteca:
 
 # CODI DE PROVA
 biblio = Biblioteca("Exemple 1")
-fitxer = Fitxer.creaFitxer("json") # podia haver triat json o xml
+fitxer = Fitxer.creaFitxer("biblioteca.json") # podia haver triat json o xml
 biblio.write_to_fitxer(fitxer)
