@@ -1,3 +1,5 @@
+# EXEMPLE DE MAIN.PY
+
 llibre1 = Llibre("99348977", "El mecanoscrit del 2n origen", "Manuel de Pedrolo", 340, False)
 llibre2 = Llibre("78668734", "La Biblia", "San Pedro", 500, True)
 
