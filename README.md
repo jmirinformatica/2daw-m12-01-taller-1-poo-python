@@ -28,7 +28,7 @@ Al prompt veuràs que ets dins de l'entorn.
 
 Ara ja pots instal·lar els paquets que necessitis, com per exemple:
 
-	pip install flask
+	pip install colorama
 
 Per generar el fitxer `requeriments.txt`: 
 
