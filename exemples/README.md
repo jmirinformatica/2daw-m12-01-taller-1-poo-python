@@ -12,23 +12,23 @@ Amb linux:
 
 Amb windows:
 
-	python -m venv .venv
+    python -m venv .venv
 
 El següent pas és activar-lo. Per això executa:
 
 Amb linux:
 
-	source .venv/bin/activate
+    source .venv/bin/activate
 
 Amb Windows:
 
-	.venv\Scripts\activate
+    .venv\Scripts\activate
 
 Al prompt veuràs que ets dins de l'entorn.
 
 Ara ja pots instal·lar els paquets que necessitis, com per exemple:
 
-	pip install colorama
+    pip install colorama
 
 Per generar el fitxer `requeriments.txt`: 
 
@@ -40,4 +40,4 @@ Aquest fitxer es fa servir per instal·lar exactament les mateixes llibreries:
 
 Per sortir de l'entorn virtual, executa:
 
-	deactivate
+    deactivate
